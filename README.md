@@ -4,13 +4,15 @@ A simple command-line implementation of the classic Rock Paper Scissors game in 
 
 ## Overview
 
-This project provides a terminal-based Rock Paper Scissors game where you can play against the computer. The game uses random selection for the computer's moves and takes player input from the command line.
+This project provides a terminal-based Rock Paper Scissors game where you can play against the computer. The game features a fully functional game engine with intelligent win/loss detection and clear feedback on every round.
 
 ## Features
 
 - **Interactive Gameplay**: Play Rock Paper Scissors directly in your terminal
 - **Computer Opponent**: Compete against a computer with random move selection
-- **Simple Interface**: Easy-to-use command-line interface
+- **Smart Input Handling**: Case-insensitive input - enter choices in any case (rock, ROCK, Rock, etc.)
+- **Clear Feedback**: Detailed messages showing your choice, computer's choice, and game outcome
+- **Complete Game Logic**: Fully implemented win/loss/tie detection with descriptive messages
 
 ## Requirements
 
@@ -39,8 +41,9 @@ python RSP.py
 Follow the on-screen prompts:
 
 - Enter your choice: `rock`, `paper`, or `scissors`
+- Input is case-insensitive (ROCK, Rock, rock all work)
 - The computer will make its random selection
-- The game will determine the winner
+- The game will display the outcome with a descriptive message
 
 ## Game Rules
 
@@ -48,6 +51,21 @@ Follow the on-screen prompts:
 - **Scissors** beats **Paper**
 - **Paper** beats **Rock**
 - Same choices result in a tie
+
+## How It Works
+
+The game consists of two main functions:
+
+- **`get_choices()`**: Prompts the player for input and generates a random computer choice
+- **`check_win()`**: Determines the winner by comparing player and computer choices, then returns a descriptive result message
+
+## Example Gameplay
+
+```
+Enter a choice(rock, paper, scissors: )rock
+You choose rock, Computer chose scissors
+Rock smashes Scissors! You Win!
+```
 
 ## File Structure
 
@@ -68,10 +86,10 @@ Contributions are welcome! Feel free to submit pull requests or open issues for 
 ## Future Enhancements
 
 - Add score tracking across multiple rounds
-- Input validation for player choices
-- Replay functionality
+- Replay functionality (play multiple rounds)
 - Difficulty levels
 - GUI implementation
+- Input validation with error handling
 
 ## License
 
