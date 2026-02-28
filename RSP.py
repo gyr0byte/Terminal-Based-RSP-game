@@ -16,6 +16,14 @@ def check_win(player, computer):
             return "Rock smashes Scissors! You Win!"
         else:
             return "Paper covers rock :( You Lost!"
+    elif player == "paper":
+        if computer == "rock":
+            return "Paper covers rock! You Win!"
+        else:
+            return "Scissors cuts Paper :( You Lost!"
+    elif player == "scissors":
+        if computer == "paper":
+            return "Scissors cuts Paper! You Win!"
+        else:
+            return "Rock smashes Scissors :( You Lost!"
         
-        
-check_win("paper", "rock")
